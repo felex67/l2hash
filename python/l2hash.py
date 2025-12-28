@@ -55,5 +55,4 @@ def l2hash(password):
     return result
 
 password = input('Пожалуйста введитее пароль: ')
-hashed = l2hash(password)
-print(hashed)
+print(l2hash(password))
