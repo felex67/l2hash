@@ -1,9 +1,11 @@
 from array import *
+# @param raw - bytesarray
+# @param off - offset index
 def bytes2int(raw, off):
-    i = int(raw[off]) & 0xff
-    i |= (int(raw[off + 1]) & 0xff) << 8
-    i |= (int(raw[off + 2]) & 0xff) << 16
-    i |= (int(raw[off + 3]) & 0xff) << 24
+    i = raw[off] & 0xff
+    i |= (raw[off + 1] & 0xff) << 8
+    i |= (raw[off + 2] & 0xff) << 16
+    i |= (raw[off + 3] & 0xff) << 24
     return i
 
 # Lineage2 password hashing function used by PTS Authority server
