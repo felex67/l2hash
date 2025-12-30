@@ -31,7 +31,7 @@ const char* l2pwdhash(char* _Dest, const char* _Pwd) {
 
     dest.u8[0] ^= key.u8[0];
     for (int i = 1; i < 16; i++) {
-        dest.u8[i] ^= dest.u8[i - 1] ^ key.u8[i];
+        dest.u8[i] ^= (dest.u8[i - 1] ^ key.u8[i]);
     }
     sprintf(_Dest, "0x");
     ptr = _Dest + 2;
